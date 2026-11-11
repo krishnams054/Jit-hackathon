@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CLOCKIT 2026 — 24 Hours National Level Hackathon | JITD × Salutix AI</title>
+  <meta name="description"
+    content="CLOCKIT 2026: 24 Hours National Level Hackathon organized by Jain Institute of Technology, Davanagere in partnership with Salutix AI. 25-26 Nov 2026 at JITD Library. ₹30,000 Prize Pool.">
+  <meta name="theme-color" content="#060913">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,5 95,25 95,75 50,95 5,75 5,25' fill='%23f59e0b'/><text x='50' y='62' font-family='sans-serif' font-size='38' font-weight='bold' text-anchor='middle' fill='%23060913'>C</text></svg>">
+
+  <!-- Google Fonts: Modern Professional UI Typography + Epic Monumental Cinzel Decorative -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=6.8">
+</head>
+
+<body id="top">
+
+  <!-- Ambient CRT Scanline Overlay -->
+  <div class="scanlines-overlay"></div>
+
+  <!-- Global Full-Website 240-Frame Flight Animation Canvas (Spans Entire Website from Start to End) -->
+  <canvas id="scroll-frame-canvas" class="scroll-frame-canvas"></canvas>
+
+  <!-- Ambient Vignette & Scrim Layer -->
+  <div class="scroll-anim-vignette"></div>
+
+  <!-- Ambient Mana Embers Particles Canvas -->
+  <canvas id="particles-bg"></canvas>
+
+  <!-- Global Live Flight HUD Pill -->
+  <div class="flight-hud-pill" id="flight-hud-pill">
+    <span class="flight-hud-dot"></span>
+    <span class="flight-hud-text" id="flight-hud-text">CITADEL FLIGHT // 0%</span>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & BRANDING SECTION
+       ========================================================================== -->
+  <header class="top-bar-wrapper">
+    <!-- Institutional Top Bar -->
+    <div class="top-institutes-bar">
+      <div class="inst-left">
+        <img src="assets/jgi-logo.png" alt="JGI Logo" class="inst-logo-jgi">
+        <span class="inst-sep">|</span>
+        <span class="inst-title">JAIN INSTITUTE OF TECHNOLOGY, DAVANAGERE</span>
+        <span class="inst-sub">• CSE, ISE &amp; AIML DEPARTMENTS</span>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+      <a href="#top" class="nav-brand">
+        <div class="brand-crest">
+          <span>⚡</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CLOCKIT <span class="brand-year">2026</span></span>
+          <span class="brand-organizer">POWERED BY <strong class="brand-salutix-glow">SALUTIX AI</strong></span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#overview">Overview</a></li>
+        <li class="nav-item"><a href="#badges">Venue &amp; Badges</a></li>
+        <li class="nav-item"><a href="#prizes">Prizes</a></li>
+        <li class="nav-item"><a href="#tracks">Tracks</a></li>
+        <li class="nav-item"><a href="#timeline">Timeline</a></li>
+        <li class="nav-item"><a href="#leadership">Guild Masters</a></li>
+        <li class="nav-item"><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Procedural Cyber Ambiance Sound Toggle -->
+        <button id="sound-toggle-btn" class="sound-btn" title="Toggle cyber ambiance audio">
+          <span>🔇</span>
+        </button>
+
+        <!-- Register Button in Top Nav -->
+        <button class="nav-reg-btn js-open-reg-modal">
+          <span>⚔️ REGISTER NOW (₹650)</span>
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       HERO PRESENTATION SECTION (FRAME 0 STARTS HERE - RUNS ACROSS ENTIRE SITE)
+       ========================================================================== -->
+  <section class="hero-section" id="overview">
+    <div class="container hero-container">
+      <div class="hero-content scroll-hero-content" id="milestone-0">
+        <!-- Badge Ribbon: BUILD ◆ BATTLE ◆ CONQUER -->
+        <div class="hero-badge-ribbon">
+          <span class="ribbon-rune">✦</span>
+          <span class="ribbon-text"><strong class="ribbon-brand-highlight">SALUTIX AI</strong> × JITD ARENA // BUILD ◆
+            BATTLE ◆ CONQUER</span>
+          <span class="ribbon-rune">✦</span>
+        </div>
+
+        <!-- Main Title: CLOCKIT (Epic Glowing Gold Stone-Carved Font Style with Heavy Drop Shadows) -->
+        <div class="hero-title-container">
+          <h1 class="hero-main-title">CLOCKIT</h1>
+          <span class="hero-sub-year">2026</span>
+        </div>
+
+        <!-- Subheading: 24 HOURS NATIONAL LEVEL HACKATHON -->
+        <div class="hero-subheading">
+          <span>24 HOURS NATIONAL LEVEL HACKATHON</span>
+          <span class="subheading-sep">✦</span>
+          <span>HEADLINE CO-ORGANIZER: <strong class="hero-salutix-highlight">SALUTIX AI</strong></span>
+        </div>
+
+        <!-- Catchphrase: DREAM IT. BUILD IT. CONQUER IT. CODE BEYOND LIMITS. -->
+        <p class="hero-catchphrase">
+          DREAM IT. BUILD IT. CONQUER IT. CODE BEYOND LIMITS.
+        </p>
+
+        <!-- Live Battle Countdown Box -->
+        <div class="hero-countdown-box">
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-days">00</span>
+            <span class="countdown-label">DAYS</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-hours">00</span>
+            <span class="countdown-label">HOURS</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-minutes">00</span>
+            <span class="countdown-label">MINUTES</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-num" id="cd-seconds">00</span>
+            <span class="countdown-label">SECONDS</span>
+          </div>
+        </div>
+
+        <!-- Prominent Action Buttons -->
+        <div class="hero-actions">
+          <button class="btn-cyber-primary js-open-reg-modal" id="register-now-btn">
+            <span>⚔️ ENTER THE ARENA // REGISTER NOW (₹650)</span>
+          </button>
+          <a href="#prizes" class="btn-cyber-secondary">
+            <span>🏆 VIEW PRIZES &amp; TRACKS</span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator Hint -->
+        <div class="scroll-indicator-hint">
+          <span class="indicator-arrow">▼</span>
+          <span class="indicator-text">SCROLL TO DIVE INTO THE CITADEL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       REALM SECTIONS (SCROLL ANIMATION RUNS CONTINUOUSLY BEHIND ALL CONTENT)
+       ========================================================================== -->
+  <div class="cinematic-realm-wrapper">
+
+
+    <!-- ==========================================================================
+       KEY EVENT DETAILS & BADGES (SECTION 3)
+       ========================================================================== -->
+    <section class="badges-section" id="badges">
+      <div class="container">
+        <div class="badges-grid">
+          <!-- Badge 1: Date & Time -->
+          <div class="cyber-badge-card reveal-on-scroll">
+            <div class="card-icon-frame">
+              <span>⏳</span>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">DATE / TIME</span>
+              <h3 class="card-title">The Battle Begins — 25 – 26 Nov 2026</h3>
+              <p class="card-desc">
+                24 Hours Non-Stop National Level Hackathon Sprint. Check-in opens at 08:30 AM IST.
+              </p>
+            </div>
+          </div>
+
+          <!-- Badge 2: Venue -->
+          <div class="cyber-badge-card cyan-accent reveal-on-scroll">
+            <div class="card-icon-frame">
+              <span>🏛️</span>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">VENUE</span>
+              <h3 class="card-title">JITD Library</h3>
+              <p class="card-desc">
+                <span class="card-highlight">Jain Institute of Technology</span>, Davanagere, Karnataka. High-speed
+                gigabit Wi-Fi, dual power grid &amp; rest pods.
+              </p>
+            </div>
+          </div>
+
+          <!-- Badge 3: National Scale & Registration Fee -->
+          <div class="cyber-badge-card purple-accent reveal-on-scroll">
+            <div class="card-icon-frame">
+              <span>🛡️</span>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">SCALE &amp; REGISTRATION</span>
+              <h3 class="card-title">National Level Arena • ₹650 / Squad</h3>
+              <p class="card-desc">
+                Open to all collegiate coders &amp; innovators. Squad: <span class="card-highlight">2 to 4
+                  Adventurers</span>. Registration Fee: <span class="card-highlight">₹650 per Team</span> (includes 24h
+                meals, snacks, Wi-Fi &amp; swag).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       PRIZE POOL PODIUM SECTION (SECTION 3)
+       ========================================================================== -->
+    <section class="prizes-section" id="prizes">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">✦ TREASURY OF VALOR ✦</span>
+          <h2 class="section-title">THE GRAND BOUNTY</h2>
+          <p class="section-desc">
+            High-tier relics and cash rewards awarded to the victorious squads who conquer the 24-hour crucible.
+          </p>
+        </div>
+
+        <!-- Highlight Box: TOTAL PRIZE POOL: ₹ 30000 with Gold Shimmer Effects -->
+        <div class="grand-prize-banner reveal-on-scroll">
+          <div class="grand-prize-label">
+            <span>◆</span>
+            <span>TOTAL PRIZE POOL: ₹ 30000</span>
+            <span>◆</span>
+          </div>
+          <div class="grand-prize-amount">
+            ₹ 30,000
+          </div>
+          <p class="grand-prize-sub">
+            First Prize: ₹ 15,000 | Second Prize: ₹ 10,000 | Third Prize: ₹ 5,000
+          </p>
+        </div>
+
+        <!-- 3-Tier RPG Prize Podium Layout -->
+        <div class="podium-grid">
+          <!-- 2nd Prize (Silver Blade) -->
+          <div class="podium-card rank-2 reveal-on-scroll">
+            <div class="podium-trophy">🥈</div>
+            <span class="podium-tier-name">RUNNER-UP // SILVER BLADE</span>
+            <div class="podium-amount">₹ 10,000</div>
+          </div>
+
+          <!-- 1st Prize (Grand Champion Relic) -->
+          <div class="podium-card rank-1 reveal-on-scroll">
+            <div class="crown-badge">👑 GRAND CHAMPION</div>
+            <div class="podium-trophy">🏆</div>
+            <span class="podium-tier-name">1ST PLACE // THE GOLDEN RELIC</span>
+            <div class="podium-amount">₹ 15,000</div>
+          </div>
+
+          <!-- 3rd Prize (Bronze Shield) -->
+          <div class="podium-card rank-3 reveal-on-scroll">
+            <div class="podium-trophy">🥉</div>
+            <span class="podium-tier-name">2ND RUNNER-UP // BRONZE SHIELD</span>
+            <div class="podium-amount">₹ 5,000</div>
+          </div>
+        </div>
+
+        <!-- Bonus Guild Perks for All Adventurers -->
+        <div class="bonus-perks-strip reveal-on-scroll">
+          <div class="perk-pill">
+            <i>📜</i>
+            <span>Official Participation Certificate for all squads</span>
+          </div>
+          <div class="perk-pill">
+            <i>💡</i>
+            <span>Live Guidance from Senior Industry Engineers</span>
+          </div>
+          <div class="perk-pill">
+            <i>⚡</i>
+            <span>High-Speed Giga-Wi-Fi &amp; Dedicated Power Ports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       HACKATHON QUEST TRACKS SECTION
+       ========================================================================== -->
+    <section class="tracks-section" id="tracks">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">✦ CHOOSE YOUR PATH ✦</span>
+          <h2 class="section-title">HACKATHON TRACKS</h2>
+          <p class="section-desc">
+            Select one of the 5 specialized quest domains or propose an audacious wildcard innovation.
+          </p>
+        </div>
+
+        <div class="tracks-grid">
+          <!-- Track 1: AI & Autonomous Agents -->
+          <div class="track-card reveal-on-scroll">
+            <div class="track-header">
+              <span class="track-number">TRACK // 01</span>
+              <div class="track-icon">🤖</div>
+            </div>
+            <h3 class="track-title">AI &amp; Autonomous Agents</h3>
+            <p class="track-desc">
+              Build multi-agent workflows, autonomous coding companions, vision-language systems, and enterprise LLM
+              automation tools.
+            </p>
+            <ul class="track-tags">
+              <li>Multi-Agent Swarms</li>
+              <li>RAG &amp; Vector DBs</li>
+              <li>Salutix AI Tools</li>
+            </ul>
+          </div>
+
+          <!-- Track 2: Web3 & Decentralized Guilds -->
+          <div class="track-card reveal-on-scroll">
+            <div class="track-header">
+              <span class="track-number">TRACK // 02</span>
+              <div class="track-icon">⛓️</div>
+            </div>
+            <h3 class="track-title">Web3 &amp; DeFi Guilds</h3>
+            <p class="track-desc">
+              Architect trustless smart contracts, decentralized finance protocols, zero-knowledge proofs, and secure
+              digital asset rails.
+            </p>
+            <ul class="track-tags">
+              <li>Solidity / Rust</li>
+              <li>ZK-SNARKs</li>
+              <li>DeFi &amp; Wallets</li>
+            </ul>
+          </div>
+
+          <!-- Track 3: Cyber Defense & Security -->
+          <div class="track-card reveal-on-scroll">
+            <div class="track-header">
+              <span class="track-number">TRACK // 03</span>
+              <div class="track-icon">🛡️</div>
+            </div>
+            <h3 class="track-title">CyberSec &amp; Zero-Trust</h3>
+            <p class="track-desc">
+              Engineer real-time threat detection, cryptographic identity shields, vulnerability scanning harnesses, and
+              offensive defense tools.
+            </p>
+            <ul class="track-tags">
+              <li>Zero Trust</li>
+              <li>Network Security</li>
+              <li>SIEM Intelligence</li>
+            </ul>
+          </div>
+
+          <!-- Track 4: Smart Campus & IoT -->
+          <div class="track-card reveal-on-scroll">
+            <div class="track-header">
+              <span class="track-number">TRACK // 04</span>
+              <div class="track-icon">📡</div>
+            </div>
+            <h3 class="track-title">Smart Campus &amp; IoT</h3>
+            <p class="track-desc">
+              Transform educational and urban spaces using edge sensors, automated resource allocators, and smart
+              hardware telemetry.
+            </p>
+            <ul class="track-tags">
+              <li>Edge Computing</li>
+              <li>Microcontrollers</li>
+              <li>Sustainability</li>
+            </ul>
+          </div>
+
+          <!-- Track 5: Open Innovation -->
+          <div class="track-card reveal-on-scroll">
+            <div class="track-header">
+              <span class="track-number">TRACK // 05</span>
+              <div class="track-icon">🔮</div>
+            </div>
+            <h3 class="track-title">Open Wildcard Innovation</h3>
+            <p class="track-desc">
+              Have a game-changing idea that shatters conventions? HealthTech, EdTech, Climate, or Gaming — build what
+              inspires you.
+            </p>
+            <ul class="track-tags">
+              <li>Wildcard</li>
+              <li>High Impact</li>
+              <li>Radical Ideas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       24-HOUR RAID TIMELINE / SCHEDULE
+       ========================================================================== -->
+    <section class="timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">✦ RAID CHRONICLES ✦</span>
+          <h2 class="section-title">24-HOUR BATTLE TIMELINE</h2>
+          <p class="section-desc">
+            Every second counts. From opening bell to final pitch, here is your quest roadmap.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Event 1 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">25 NOV // 08:30 AM IST</div>
+              <h4 class="timeline-title">Adventurer Check-in &amp; Breakfast</h4>
+              <p class="timeline-desc">Squad arrival at JITD Library, ID verification, squad badge allocation, and
+                breakfast recharge.</p>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">25 NOV // 10:00 AM IST</div>
+              <h4 class="timeline-title">Grand Opening Ceremony &amp; Keynote</h4>
+              <p class="timeline-desc">Address by HODs, Salutix AI leadership keynote, problem statement release, and
+                rules briefing.</p>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">25 NOV // 11:00 AM IST</div>
+              <h4 class="timeline-title">The Hackathon Begins — Clock Starts!</h4>
+              <p class="timeline-desc">The 24-hour countdown starts ticking. Squads initiate codebase repos and
+                architecture builds.</p>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">25 NOV // 04:00 PM IST</div>
+              <h4 class="timeline-title">Mentorship Round 01</h4>
+              <p class="timeline-desc">Industry veterans and Salutix AI engineers review squad prototypes, providing
+                tactical guidance.</p>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">25 NOV // 08:30 PM IST</div>
+              <h4 class="timeline-title">Guild Dinner &amp; Midway Checkpoint</h4>
+              <p class="timeline-desc">Wholesome dinner served, progress checkpoint submission, and second wind strategy
+                planning.</p>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">26 NOV // 12:00 AM IST</div>
+              <h4 class="timeline-title">Midnight Fuel &amp; Gaming Quest</h4>
+              <p class="timeline-desc">Midnight coffee, energy snacks, mini-coding riddle quest, and lightning
+                icebreakers.</p>
+            </div>
+          </div>
+
+          <!-- Event 7 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">26 NOV // 09:30 AM IST</div>
+              <h4 class="timeline-title">Code Freeze &amp; GitHub Lock</h4>
+              <p class="timeline-desc">All repository commits locked. Final pitch deck and demo video submissions
+                collected.</p>
+            </div>
+          </div>
+
+          <!-- Event 8 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">26 NOV // 10:30 AM IST</div>
+              <h4 class="timeline-title">Final Boss Pitch Presentations</h4>
+              <p class="timeline-desc">Top qualifying squads present live prototypes on stage before the distinguished
+                jury panel.</p>
+            </div>
+          </div>
+
+          <!-- Event 9 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-time">26 NOV // 01:30 PM IST</div>
+              <h4 class="timeline-title">Grand Award Ceremony</h4>
+              <p class="timeline-desc">Felicitation of winners, prize bounty distribution of ₹30,000, and closing
+                celebrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       COORDINATORS & LEADERSHIP SECTION (SECTION 5)
+       ========================================================================== -->
+    <section class="leadership-section" id="leadership">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">✦ COUNCIL OF LEADERSHIP ✦</span>
+          <h2 class="section-title">GUILD MASTERS &amp; COORDINATORS</h2>
+          <p class="section-desc">
+            Meet the academic visionaries and student leadership driving CLOCKIT 2026.
+          </p>
+        </div>
+
+        <!-- Student Coordinators -->
+        <div class="leadership-category reveal-on-scroll">
+          <div class="category-title-bar">
+            <h3 class="category-title">👥 STUDENT COORDINATORS</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="coordinators-grid">
+            <!-- Student Coordinator 1: Jayesh Suthar -->
+            <div class="leader-card">
+              <div class="leader-avatar student-badge-num">1</div>
+              <div class="leader-info">
+                <span class="leader-role">STUDENT COORDINATOR</span>
+                <h4 class="leader-name">Jayesh Suthar</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 6361747047</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+916361747047" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/916361747047?text=Hi%20Jayesh,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Coordinator 2: Aript Patil -->
+            <div class="leader-card">
+              <div class="leader-avatar student-badge-num">2</div>
+              <div class="leader-info">
+                <span class="leader-role">STUDENT COORDINATOR</span>
+                <h4 class="leader-name">Aript Patil</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 9945985494</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+919945985494" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/919945985494?text=Hi%20Aript,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Coordinator 3: Kishore K -->
+            <div class="leader-card">
+              <div class="leader-avatar student-badge-num">3</div>
+              <div class="leader-info">
+                <span class="leader-role">STUDENT COORDINATOR</span>
+                <h4 class="leader-name">Kishore K</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 9663084464</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+919663084464" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/919663084464?text=Hi%20Kishore,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty Coordinators -->
+        <div class="leadership-category reveal-on-scroll">
+          <div class="category-title-bar">
+            <h3 class="category-title">👤 FACULTY COORDINATORS</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="coordinators-grid">
+            <!-- Faculty Coordinator 1: Mrs. Archana KN -->
+            <div class="leader-card faculty-accent">
+              <div class="leader-avatar faculty-avatar">📞</div>
+              <div class="leader-info">
+                <span class="leader-role">FACULTY COORDINATOR</span>
+                <h4 class="leader-name">Mrs. Archana KN</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 6363497831</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+916363497831" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/916363497831?text=Dear%20Prof.%20Archana,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Faculty Coordinator 2: Ms. Vaishnavi CS -->
+            <div class="leader-card faculty-accent">
+              <div class="leader-avatar faculty-avatar">📞</div>
+              <div class="leader-info">
+                <span class="leader-role">FACULTY COORDINATOR</span>
+                <h4 class="leader-name">Ms. Vaishnavi CS</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 6362599025</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+916362599025" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/916362599025?text=Dear%20Prof.%20Vaishnavi,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Faculty Coordinator 3: Mr. Pavan Kumar T H -->
+            <div class="leader-card faculty-accent">
+              <div class="leader-avatar faculty-avatar">📞</div>
+              <div class="leader-info">
+                <span class="leader-role">FACULTY COORDINATOR</span>
+                <h4 class="leader-name">Mr. Pavan Kumar T H</h4>
+                <div class="leader-contact">
+                  <span>📞</span>
+                  <span>+91 7795294984</span>
+                </div>
+                <div class="leader-actions">
+                  <a href="tel:+917795294984" class="action-btn call-btn">
+                    <span>Call</span>
+                  </a>
+                  <a href="https://wa.me/917795294984?text=Dear%20Prof.%20Pavan%20Kumar,%20I%20have%20a%20query%20regarding%20CLOCKIT%202026"
+                    target="_blank" rel="noopener" class="action-btn wa-btn">
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organizers / Department Heads -->
+        <div class="leadership-category reveal-on-scroll">
+          <div class="category-title-bar">
+            <h3 class="category-title">👥 ORGANIZERS // HODs</h3>
+            <div class="category-line"></div>
+          </div>
+
+          <div class="dept-leaders-grid">
+            <!-- Organizer 1: Dr. Latha B M -->
+            <div class="dept-card">
+              <span class="dept-badge">ORGANIZER // CS&amp;E</span>
+              <h4 class="dept-name">Dr. Latha B M</h4>
+              <p class="dept-title">
+                <strong>Dept. of CS&amp;E</strong><br>
+                Head of Department, Computer Science &amp; Engineering<br>
+                Jain Institute of Technology, Davanagere
+              </p>
+            </div>
+
+            <!-- Organizer 2: Dr. H S Saraswathi -->
+            <div class="dept-card">
+              <span class="dept-badge">ORGANIZER // IS&amp;E</span>
+              <h4 class="dept-name">Dr. H S Saraswathi</h4>
+              <p class="dept-title">
+                <strong>Dept. of IS&amp;E</strong><br>
+                Head of Department, Information Science &amp; Engineering<br>
+                Jain Institute of Technology, Davanagere
+              </p>
+            </div>
+
+            <!-- Organizer 3: Dr. Azizkhan F Pathan -->
+            <div class="dept-card">
+              <span class="dept-badge">ORGANIZER // AI&amp;ML</span>
+              <h4 class="dept-name">Dr. Azizkhan F Pathan</h4>
+              <p class="dept-title">
+                <strong>Dept. of AI&amp;ML</strong><br>
+                Head of Department, Artificial Intelligence &amp; Machine Learning<br>
+                Jain Institute of Technology, Davanagere
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       FAQ SECTION
+       ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">✦ GUILD CODEX ✦</span>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-desc">
+            Clear answers to common questions about participation, eligibility, rules, and amenities.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal-on-scroll">
+            <div class="faq-question">
+              <span>What is the squad size limit for CLOCKIT 2026?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Teams can comprise 2 to 4 members. Inter-college and cross-department squads are warmly welcomed to foster
+              diverse innovation.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal-on-scroll">
+            <div class="faq-question">
+              <span>What is the registration fee to participate?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              The registration fee is <strong>₹650 per squad</strong> (for the entire team of 2 to 4 adventurers). This
+              includes full 24-hour non-stop meals, midnight fuel &amp; coffee, high-speed Wi-Fi, rest pods, official
+              certificates, and exclusive swag.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal-on-scroll">
+            <div class="faq-question">
+              <span>What amenities will be provided during the 24 hours?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Participants will receive complimentary breakfast, lunch, high-tea, dinner, and midnight coffee/snacks.
+              High-speed gigabit Wi-Fi, power backup, and designated rest/recharge pods will be active throughout.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal-on-scroll">
+            <div class="faq-question">
+              <span>Can I build on an existing project or GitHub repository?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              All code, commits, and assets submitted must be conceived and forged during the 24-hour sprint.
+              Open-source libraries and public APIs are permitted, but preexisting complete codebases are strictly
+              disqualified.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal-on-scroll">
+            <div class="faq-question">
+              <span>Who can I contact if I have further queries?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              You can reach our student coordinators <strong>Jayesh Suthar</strong> (+91 6361747047), <strong>Aript
+                Patil</strong> (+91 9945985494), or <strong>Kishore K</strong> (+91 9663084464), or our faculty
+              coordinators <strong>Mrs. Archana KN</strong> (+91 6363497831), <strong>Ms. Vaishnavi CS</strong> (+91
+              6362599025), and <strong>Mr. Pavan Kumar T H</strong> (+91 7795294984) via phone or WhatsApp anytime.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       INTERACTIVE REGISTRATION MODAL POPUP (SECTION 4)
+       ========================================================================== -->
+    <div class="modal-backdrop" id="reg-modal-backdrop">
+      <div class="modal-dialog">
+        <button class="modal-close-btn" id="reg-modal-close" aria-label="Close modal">✕</button>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <span class="modal-eyebrow">NATIONAL ARENA REGISTRATION</span>
+          <h3 class="modal-title">REGISTER SQUAD</h3>
+          <p class="modal-subtitle">Secure your squad's slot for the CLOCKIT 2026 24-Hour Crucible. <strong>Registration
+              Fee: ₹650 per Squad</strong>.</p>
+        </div>
+
+        <!-- Registration Form -->
+        <form class="reg-form" id="clockit-reg-form">
+          <!-- Row 1: Team Name & Leader Name -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="team-name-input">Team / Squad Name *</label>
+              <input type="text" id="team-name-input" class="form-input" placeholder="e.g. CyberVanguard" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="leader-name-input">Team Leader Name *</label>
+              <input type="text" id="leader-name-input" class="form-input" placeholder="Full Name" required>
+            </div>
+          </div>
+
+          <!-- Row 2: Email & Phone Number -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="leader-email-input">Leader Email Address *</label>
+              <input type="email" id="leader-email-input" class="form-input" placeholder="leader@college.edu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="leader-phone-input">Phone Number (+91) *</label>
+              <input type="tel" id="leader-phone-input" class="form-input" placeholder="+91 9876543210" required>
+            </div>
+          </div>
+
+          <!-- Row 3: College Name & Track -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="college-name-input">College / Institute Name *</label>
+              <input type="text" id="college-name-input" class="form-input"
+                placeholder="e.g. Jain Institute of Technology" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="track-select">Quest Track *</label>
+              <select id="track-select" class="form-select">
+                <option value="AI &amp; Autonomous Agents">Track 1: AI &amp; Autonomous Agents</option>
+                <option value="Web3 &amp; DeFi Guilds">Track 2: Web3 &amp; DeFi Guilds</option>
+                <option value="CyberSec &amp; Zero-Trust">Track 3: CyberSec &amp; Zero-Trust</option>
+                <option value="Smart Campus &amp; IoT">Track 4: Smart Campus &amp; IoT</option>
+                <option value="Open Wildcard Innovation">Track 5: Open Wildcard Innovation</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Number of Members Selector -->
+          <div class="form-group">
+            <label class="form-label" for="num-members-select">Number of Squad Members *</label>
+            <select id="num-members-select" class="form-select">
+              <option value="2">2 Members</option>
+              <option value="3">3 Members</option>
+              <option value="4" selected>4 Members (Recommended)</option>
+            </select>
+          </div>
+
+          <!-- Dynamic Member Detail Inputs Generated Live -->
+          <div id="dynamic-members-container"></div>
+
+          <!-- Embedded Scan to Register QR Code Placeholder Block -->
+          <div class="qr-scan-block">
+            <div class="qr-box">
+              <svg viewBox="0 0 100 100">
+                <!-- Geometric QR Code SVG Representation -->
+                <rect x="0" y="0" width="30" height="30" fill="#060913" />
+                <rect x="6" y="6" width="18" height="18" fill="#fff" />
+                <rect x="10" y="10" width="10" height="10" fill="#060913" />
+
+                <rect x="70" y="0" width="30" height="30" fill="#060913" />
+                <rect x="76" y="6" width="18" height="18" fill="#fff" />
+                <rect x="80" y="10" width="10" height="10" fill="#060913" />
+
+                <rect x="0" y="70" width="30" height="30" fill="#060913" />
+                <rect x="6" y="76" width="18" height="18" fill="#fff" />
+                <rect x="10" y="80" width="10" height="10" fill="#060913" />
+
+                <!-- Data Pixels -->
+                <rect x="40" y="10" width="6" height="6" fill="#060913" />
+                <rect x="52" y="10" width="6" height="6" fill="#060913" />
+                <rect x="40" y="24" width="6" height="6" fill="#060913" />
+                <rect x="10" y="44" width="6" height="6" fill="#060913" />
+                <rect x="24" y="44" width="6" height="6" fill="#060913" />
+                <rect x="42" y="42" width="16" height="16" fill="#060913" />
+                <rect x="70" y="44" width="6" height="6" fill="#060913" />
+                <rect x="84" y="44" width="6" height="6" fill="#060913" />
+                <rect x="40" y="74" width="6" height="6" fill="#060913" />
+                <rect x="54" y="82" width="6" height="6" fill="#060913" />
+                <rect x="70" y="74" width="6" height="6" fill="#060913" />
+                <rect x="84" y="84" width="6" height="6" fill="#060913" />
+              </svg>
+              <div class="qr-laser-line"></div>
+            </div>
+            <div class="qr-desc">
+              <h4>SCAN TO REGISTER / VERIFY</h4>
+              <p>Scan with any camera or UPI app to access the official CLOCKIT 2026 Adventurers' Discord &amp; WhatsApp
+                Briefing Hub.</p>
+              <span class="qr-badge">⚔️ ENTRY FEE: ₹650 PER SQUAD • MEALS, REST PODS &amp; SWAG INCLUDED</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit-reg">
+            <span>⚔️ SUBMIT SQUAD REGISTRATION (₹650)</span>
+          </button>
+        </form>
+
+        <!-- Success Confirmation State Upon Submission -->
+        <div class="reg-success-state" id="reg-success-state">
+          <div class="success-icon">✦ ⚔️ ✦</div>
+          <h3 class="success-title">REGISTRATION CONFIRMED!</h3>
+          <p class="success-desc">
+            Your squad has been enrolled into the CLOCKIT 2026 National Hackathon Ledger.
+          </p>
+
+          <!-- Holographic Adventurer Battle Pass Ticket -->
+          <div class="battle-pass-ticket">
+            <div class="pass-header">
+              <span class="pass-brand">CLOCKIT 2026 // ENTRY PASS</span>
+              <span class="pass-id" id="ticket-pass-id">CLK26-X892A</span>
+            </div>
+            <div class="pass-details-grid">
+              <div class="pass-field">
+                <span class="pass-label">SQUAD NAME</span>
+                <span class="pass-val" id="ticket-team-name">CyberVanguard</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">TEAM LEADER</span>
+                <span class="pass-val" id="ticket-leader-name">Arjun Sharma</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">COLLEGE / INST</span>
+                <span class="pass-val" id="ticket-college-name">Jain Institute of Tech</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">TRACK</span>
+                <span class="pass-val" id="ticket-track-name">AI &amp; Autonomous Agents</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">SQUAD SIZE</span>
+                <span class="pass-val" id="ticket-squad-size">4 Adventurers</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">VENUE &amp; DATE</span>
+                <span class="pass-val">JITD Library | 25-26 Nov 2026</span>
+              </div>
+              <div class="pass-field">
+                <span class="pass-label">REGISTRATION FEE</span>
+                <span class="pass-val" style="color:var(--gold-light);">₹650 (Paid / Confirmed)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:12px;">
+            <button class="btn-cyber-primary" id="btn-print-pass">
+              <span>🖨️ PRINT / SAVE PASS</span>
+            </button>
+            <button class="btn-cyber-secondary" id="btn-reset-reg">
+              <span>REGISTER ANOTHER</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>CLOCKIT 2026</h4>
+            <p>
+              24 Hours National Level Hackathon organized jointly by Jain Institute of Technology, Davanagere (CSE, ISE
+              &amp; AIML Departments) and Salutix AI.
+            </p>
+            <p style="margin-top:12px; color:var(--gold-light); font-size:0.8rem;">
+              DREAM IT. BUILD IT. CONQUER IT. CODE BEYOND LIMITS.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>QUICK ACCESS</h5>
+            <ul class="footer-links">
+              <li><a href="#overview">Overview &amp; Hero</a></li>
+              <li><a href="#prizes">Prize Pool (₹30,000)</a></li>
+              <li><a href="#tracks">Hackathon Tracks</a></li>
+              <li><a href="#timeline">24-Hour Timeline</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>STUDENT COORDINATORS</h5>
+            <ul class="footer-links">
+              <li><a href="tel:+916361747047">Jayesh Suthar: +91 6361747047</a></li>
+              <li><a href="tel:+919945985494">Aript Patil: +91 9945985494</a></li>
+              <li><a href="tel:+919663084464">Kishore K: +91 9663084464</a></li>
+              <li><span style="color:var(--text-dim);">JITD Campus, Davanagere</span></li>
+              <li><span style="color:var(--text-dim);">Karnataka, India</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 CLOCKIT • JAIN INSTITUTE OF TECHNOLOGY, DAVANAGERE × SALUTIX AI. ALL RIGHTS RESERVED.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+       SCRIPTS
+       ========================================================================== -->
+    <!-- 1. Global Full-Website 240-Frame Flight Animation Engine -->
+    <script src="js/scroll-frame-anim.js?v=6.2"></script>
+
+    <!-- 2. Interactive Registration Modal & Dynamic Battle Pass Generator -->
+    <script src="js/registration-modal.js?v=6.2"></script>
+
+    <!-- 3. Procedural Cyber-Fantasy Web Audio Synthesizer -->
+    <script src="js/audio-ambiance.js?v=6.2"></script>
+
+    <!-- 4. Main Interaction & Particle Engine -->
+    <script src="js/main.js?v=6.2"></script>
+</body>
+
+</html>
